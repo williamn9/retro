@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circle of the Moon — Playing Guide</title>
+  <meta name="description" content="A clear GBA playing guide for Castlevania: Circle of the Moon — maps, route, bosses, relics, and optional areas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-nav">
+    <a class="nav-brand" href="#top">CotM</a>
+    <nav aria-label="Primary">
+      <a href="#route">Route</a>
+      <a href="#maps">Maps</a>
+      <a href="#chapters">Chapters</a>
+      <a href="#bosses">Bosses</a>
+      <a href="#optional">Optional</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Hero">
+      <div class="hero-sky" aria-hidden="true">
+        <div class="moon"></div>
+        <div class="stars"></div>
+        <div class="castle"></div>
+        <div class="mist"></div>
+      </div>
+      <div class="hero-copy">
+        <p class="brand">Castlevania</p>
+        <h1>Circle of the Moon</h1>
+        <p class="lede">A GBA playing guide for Nathan Graves — relic order, boss path, and what to skip.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#route">Start the route</a>
+          <a class="btn ghost" href="#maps">Open maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="route" class="section route">
+      <div class="section-inner">
+        <h2>The route</h2>
+        <p class="section-lede">Follow bosses and relics. Optional wings of the castle are marked so you never feel lost.</p>
+        <ol class="route-list">
+          <li><span class="step">01</span><span class="place">Catacomb</span><span class="boss">Cerberus → Double</span></li>
+          <li><span class="step">02</span><span class="place">Audience Room</span><span class="boss">Necromancer → Tackle</span></li>
+          <li><span class="step">03</span><span class="place">Machine Tower</span><span class="boss">Iron Golem → Kick Boots</span></li>
+          <li><span class="step">04</span><span class="place">Chapel Tower</span><span class="boss">Adramelech → statues clear</span></li>
+          <li class="optional"><span class="step">05</span><span class="place">Underground Gallery</span><span class="boss">Dragon Zombie · optional</span></li>
+          <li class="optional"><span class="step">06</span><span class="place">Underground Warehouse</span><span class="boss">Death · optional</span></li>
+          <li><span class="step">07</span><span class="place">Underground Waterway</span><span class="boss">Camilla → Roc Wing</span></li>
+          <li><span class="step">08</span><span class="place">Observation Tower</span><span class="boss">Hugh → Last Key</span></li>
+          <li class="optional"><span class="step">09</span><span class="place">Battle Arena</span><span class="boss">17-room trial · optional</span></li>
+          <li><span class="step">10</span><span class="place">Ceremonial Room</span><span class="boss">Dracula</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="maps" class="section maps">
+      <div class="section-inner maps-inner">
+        <h2>Maps</h2>
+        <p class="section-lede">StrategyWiki area maps — same room layout as the in-game SELECT map. Blue rooms are normal, red are saves, yellow are warps.</p>
+
+        <div class="map-legend" aria-label="Map legend">
+          <span><i class="swatch room"></i> Room</span>
+          <span><i class="swatch save"></i> Save</span>
+          <span><i class="swatch warp"></i> Warp</span>
+          <span><i class="swatch border"></i> Area border</span>
+        </div>
+
+        <figure class="castle-overview">
+          <figcaption>Camilla’s Castle — full overview</figcaption>
+          <div class="castle-overview-frame">
+            <img
+              src="maps/castle-overview.png"
+              alt="Full Castlevania Circle of the Moon castle map from StrategyWiki"
+              width="803"
+              height="675"
+              class="wiki-map overview-img"
+            />
+          </div>
+        </figure>
+
+        <div class="area-map-picker" role="tablist" aria-label="Area maps">
+          <button type="button" role="tab" aria-selected="true" data-area="catacomb">Catacomb</button>
+          <button type="button" role="tab" aria-selected="false" data-area="abyss">Abyss</button>
+          <button type="button" role="tab" aria-selected="false" data-area="audience">Audience</button>
+          <button type="button" role="tab" aria-selected="false" data-area="outer">Outer Wall</button>
+          <button type="button" role="tab" aria-selected="false" data-area="triumph">Triumph</button>
+          <button type="button" role="tab" aria-selected="false" data-area="machine">Machine</button>
+          <button type="button" role="tab" aria-selected="false" data-area="eternal">Eternal</button>
+          <button type="button" role="tab" aria-selected="false" data-area="chapel">Chapel</button>
+          <button type="button" role="tab" aria-selected="false" data-area="gallery">Gallery</button>
+          <button type="button" role="tab" aria-selected="false" data-area="warehouse">Warehouse</button>
+          <button type="button" role="tab" aria-selected="false" data-area="waterway">Waterway</button>
+          <button type="button" role="tab" aria-selected="false" data-area="observation">Observation</button>
+          <button type="button" role="tab" aria-selected="false" data-area="arena">Arena</button>
+          <button type="button" role="tab" aria-selected="false" data-area="ceremonial">Ceremonial</button>
+        </div>
+
+        <div class="area-panels">
+          <article class="area-panel is-active" id="map-catacomb" data-area="catacomb" role="tabpanel">
+            <header>
+              <h3>Catacomb</h3>
+              <p>Opening area. Clear side rooms, then defeat Cerberus for Double.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/catacomb.png" alt="Catacomb map from StrategyWiki" width="391" height="379" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-abyss" data-area="abyss" role="tabpanel" hidden>
+            <header>
+              <h3>Abyss Stairway</h3>
+              <p>Vertical climb from Catacomb up into the Audience Room approach.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/abyss-stairway.png" alt="Abyss Stairway map from StrategyWiki" width="100" height="299" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-audience" data-area="audience" role="tabpanel" hidden>
+            <header>
+              <h3>Audience Room</h3>
+              <p>Castle hub. Necromancer here drops Tackle.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/audience-room.png" alt="Audience Room map from StrategyWiki" width="538" height="439" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-outer" data-area="outer" role="tabpanel" hidden>
+            <header>
+              <h3>Outer Wall</h3>
+              <p>Connects Audience Room routes along the castle face.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/outer-wall.png" alt="Outer Wall map from StrategyWiki" width="187" height="113" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-triumph" data-area="triumph" role="tabpanel" hidden>
+            <header>
+              <h3>Triumph Hallway</h3>
+              <p>Link between Audience Room and Machine Tower.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/triumph-hallway.png" alt="Triumph Hallway map from StrategyWiki" width="215" height="119" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-machine" data-area="machine" role="tabpanel" hidden>
+            <header>
+              <h3>Machine Tower</h3>
+              <p>Vertical tower. Iron Golem drops Kick Boots.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/machine-tower.png" alt="Machine Tower map from StrategyWiki" width="357" height="401" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-eternal" data-area="eternal" role="tabpanel" hidden>
+            <header>
+              <h3>Eternal Corridor</h3>
+              <p>Approach corridor into Chapel Tower.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/eternal-corridor.png" alt="Eternal Corridor map from StrategyWiki" width="407" height="103" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-chapel" data-area="chapel" role="tabpanel" hidden>
+            <header>
+              <h3>Chapel Tower</h3>
+              <p>Adramelech fight. Clearing statues opens the lower castle.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/chapel-tower.png" alt="Chapel Tower map from StrategyWiki" width="558" height="357" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-gallery" data-area="gallery" role="tabpanel" hidden>
+            <header>
+              <h3>Underground Gallery <em>optional</em></h3>
+              <p>Dragon Zombie. Required before Warehouse or Battle Arena.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/underground-gallery.png" alt="Underground Gallery map from StrategyWiki" width="376" height="275" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-warehouse" data-area="warehouse" role="tabpanel" hidden>
+            <header>
+              <h3>Underground Warehouse <em>optional</em></h3>
+              <p>Death drops Heavy Ring and cleanses Waterway poison.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/underground-warehouse.png" alt="Underground Warehouse map from StrategyWiki" width="272" height="455" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-waterway" data-area="waterway" role="tabpanel" hidden>
+            <header>
+              <h3>Underground Waterway</h3>
+              <p>Camilla drops Roc Wing for late-game flight.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/underground-waterway.png" alt="Underground Waterway map from StrategyWiki" width="544" height="324" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-observation" data-area="observation" role="tabpanel" hidden>
+            <header>
+              <h3>Observation Tower</h3>
+              <p>Hugh drops the Last Key to the Ceremonial Room.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/observation-tower.png" alt="Observation Tower map from StrategyWiki" width="268" height="381" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-arena" data-area="arena" role="tabpanel" hidden>
+            <header>
+              <h3>Battle Arena <em>optional</em></h3>
+              <p>Seventeen-room trial. Needs Heavy Ring and Roc Wing.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/battle-arena.png" alt="Battle Arena map from StrategyWiki" width="256" height="405" class="wiki-map" />
+            </figure>
+          </article>
+
+          <article class="area-panel" id="map-ceremonial" data-area="ceremonial" role="tabpanel" hidden>
+            <header>
+              <h3>Ceremonial Room</h3>
+              <p>Final chamber — Dracula. Last Key required.</p>
+            </header>
+            <figure class="wiki-map-figure">
+              <img src="maps/ceremonial-room.png" alt="Ceremonial Room map from StrategyWiki" width="200" height="223" class="wiki-map" />
+            </figure>
+          </article>
+        </div>
+
+        <p class="map-credit">
+          Maps from
+          <a href="https://strategywiki.org/wiki/Castlevania:_Circle_of_the_Moon/Maps" target="_blank" rel="noopener">StrategyWiki</a>
+          (fan maps of in-game layouts). Also:
+          <a href="https://vgmaps.de/maps/gba/castlevania-circle-of-the-moon" target="_blank" rel="noopener">VGMaps</a>
+          ·
+          <a href="https://petercypers.github.io/COTM_interactive_map/" target="_blank" rel="noopener">Interactive map</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="chapters" class="section chapters">
+      <div class="section-inner">
+        <h2>Chapters</h2>
+        <p class="section-lede">Each stop ends at a boss. Afterward, loop back for power-ups your new relic unlocks.</p>
+
+        <article class="chapter" id="catacomb">
+          <header>
+            <span class="chapter-num">01</span>
+            <h3>Catacomb</h3>
+          </header>
+          <p>Climb out of the opening pit, learn the whip and sub-weapons, and map the early side rooms. Defeat <strong>Cerberus</strong> for the <strong>Double</strong> relic (double jump).</p>
+          <ul>
+            <li>Clear both forks before the boss when you can — early hearts and cards matter.</li>
+            <li>Double jump opens Abyss Stairway and the climb to Audience Room.</li>
+          </ul>
+        </article>
+
+        <article class="chapter" id="audience">
+          <header>
+            <span class="chapter-num">02</span>
+            <h3>Audience Room</h3>
+          </header>
+          <p>Ascend Abyss Stairway, cross the Outer Wall and Triumph Hallway. Defeat <strong>Necromancer</strong> for <strong>Tackle</strong> (break heavy blocks).</p>
+          <ul>
+            <li>Use Tackle on cracked walls and floor blocks you passed earlier.</li>
+            <li>Machine Tower is next — expect gears, spikes, and vertical pressure.</li>
+          </ul>
+        </article>
+
+        <article class="chapter" id="machine">
+          <header>
+            <span class="chapter-num">03</span>
+            <h3>Machine Tower</h3>
+          </header>
+          <p>Push through conveyor hazards and armored foes. Defeat <strong>Iron Golem</strong> for the <strong>Kick Boots</strong> (wall kick).</p>
+          <ul>
+            <li>Wall kick reaches high shafts and missed chests in earlier towers.</li>
+            <li>Eternal Corridor leads into Chapel Tower.</li>
+          </ul>
+        </article>
+
+        <article class="chapter" id="chapel">
+          <header>
+            <span class="chapter-num">04</span>
+            <h3>Chapel Tower</h3>
+          </header>
+          <p>Cross Eternal Corridor and scale the chapel. Defeat <strong>Adramelech</strong>, then destroy the blocking statues that open the deeper castle.</p>
+          <ul>
+            <li>After statues fall, you can commit to the required Waterway path — or detour optional.</li>
+            <li>Gallery → Warehouse → Arena need Gallery first.</li>
+          </ul>
+        </article>
+
+        <article class="chapter" id="waterway">
+          <header>
+            <span class="chapter-num">07</span>
+            <h3>Underground Waterway</h3>
+          </header>
+          <p>Navigate flooded corridors (poison water unless you cleared Death). Defeat <strong>Camilla</strong> for the <strong>Roc Wing</strong> (flight / high jump).</p>
+          <ul>
+            <li>Roc Wing is the late-game exploration key — revisit locked ceilings everywhere.</li>
+            <li>Observation Tower opens for the duel with Hugh.</li>
+          </ul>
+        </article>
+
+        <article class="chapter" id="observation">
+          <header>
+            <span class="chapter-num">08</span>
+            <h3>Observation Tower</h3>
+          </header>
+          <p>Climb the tower, gather late DSS cards and gear, then defeat <strong>Hugh</strong> for the <strong>Last Key</strong>.</p>
+          <ul>
+            <li>Last Key unlocks the Ceremonial Room path to Dracula.</li>
+            <li>Optional Battle Arena wants Heavy Ring + Roc Wing.</li>
+          </ul>
+        </article>
+
+        <article class="chapter" id="ceremonial">
+          <header>
+            <span class="chapter-num">10</span>
+            <h3>Ceremonial Room</h3>
+          </header>
+          <p>Use the Last Key, prepare DSS combos and healing, then defeat <strong>Dracula</strong> to finish Nathan’s story.</p>
+          <ul>
+            <li>Bring strong offense cards and room to dodge wide sweeps.</li>
+            <li>Save before the door — classic CotM final check.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="bosses" class="section bosses">
+      <div class="section-inner">
+        <h2>Boss order</h2>
+        <p class="section-lede">Required fights first; optional demons when you want power and XP.</p>
+        <div class="boss-rail" role="list">
+          <div class="boss-chip" role="listitem"><span>Cerberus</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><span>Necromancer</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><span>Iron Golem</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><span>Adramelech</span><em>required</em></div>
+          <div class="boss-chip opt" role="listitem"><span>Dragon Zombie</span><em>optional</em></div>
+          <div class="boss-chip opt" role="listitem"><span>Death</span><em>optional</em></div>
+          <div class="boss-chip" role="listitem"><span>Camilla</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><span>Hugh</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><span>Dracula</span><em>final</em></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="optional" class="section optional-areas">
+      <div class="section-inner">
+        <h2>Optional wings</h2>
+        <p class="section-lede">Skip these on a first clear if you want a lean path — or take them for relics and XP.</p>
+        <div class="opt-grid">
+          <article>
+            <h3>Underground Gallery</h3>
+            <p>Dragon Zombie. Required if you want Warehouse or Battle Arena. Strong XP and card hunting.</p>
+          </article>
+          <article>
+            <h3>Underground Warehouse</h3>
+            <p>Death → Heavy Ring. Cleanses Waterway poison and unlocks heavy-object puzzles.</p>
+          </article>
+          <article>
+            <h3>Battle Arena</h3>
+            <p>Seventeen-room trial. Needs Heavy Ring and Roc Wing. Repeatable challenge run.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tips">
+      <div class="section-inner">
+        <h2>Playing tips</h2>
+        <p class="section-lede">Small habits that keep CotM’s difficulty fair.</p>
+        <ul class="tip-list">
+          <li>Farm DSS cards early — Saturn / Pluto / Mercury combos carry mid-game.</li>
+          <li>After every relic, backtrack: CotM hides many upgrades behind “now you can reach that ledge.”</li>
+          <li>Don’t sequence-break your first run; optional bosses are easier with Roc Wing later, but Gallery first if you want them.</li>
+          <li>Save often at candles / rooms with MP — boss retries are part of the loop.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fan playing guide for personal use · Castlevania: Circle of the Moon · GBA</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -5,3 +5,6 @@
 *.key
 credentials.json
 secrets.h
+
+# Local ROM collection — never publish
+ROMS/
