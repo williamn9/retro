@@ -103,65 +103,28 @@ a:hover {
   isolation: isolate;
 }
 
-.hero-sky {
+.hero-art {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(ellipse 55% 40% at 72% 18%, rgba(180, 200, 230, 0.18), transparent 60%),
-    linear-gradient(185deg, #15202c 0%, #0c1218 48%, #080b10 100%);
+  background: #0c1218;
 }
 
-.moon {
-  position: absolute;
-  top: 12%;
-  right: 14%;
-  width: clamp(5.5rem, 16vw, 9rem);
-  height: clamp(5.5rem, 16vw, 9rem);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 35% 35%, #f4f7fb 0%, #c9d4e4 45%, #8fa3bc 100%);
-  box-shadow: 0 0 60px var(--moon-glow), 0 0 120px rgba(180, 200, 230, 0.15);
-  animation: moon-rise 1.8s ease-out both;
+.hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center;
+  animation: art-in 1.6s ease-out both;
 }
 
-.stars {
+.hero-veil {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 12% 22%, rgba(255, 255, 255, 0.7), transparent),
-    radial-gradient(1px 1px at 28% 40%, rgba(255, 255, 255, 0.45), transparent),
-    radial-gradient(1.5px 1.5px at 48% 14%, rgba(255, 255, 255, 0.55), transparent),
-    radial-gradient(1px 1px at 63% 33%, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1px 1px at 82% 48%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(1px 1px at 18% 58%, rgba(255, 255, 255, 0.35), transparent),
-    radial-gradient(1.5px 1.5px at 91% 20%, rgba(255, 255, 255, 0.6), transparent);
-  opacity: 0;
-  animation: stars-in 2.2s ease 0.4s both;
-}
-
-.castle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 42%;
   background:
-    linear-gradient(180deg, transparent 0%, rgba(8, 10, 14, 0.55) 40%, #06080c 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 320' preserveAspectRatio='none'%3E%3Cpath fill='%23091016' d='M0 320V180l40-20 30 40 50-90 40 70 35-30 45 80 60-120 40 50 55-40 30 90 70-110 45 35 80-95 50 55 60-40 40 70 90-130 55 45 70-60 40 80 80-100V320z'/%3E%3C/svg%3E")
-      bottom / 100% 100% no-repeat;
-  animation: castle-in 1.6s ease-out 0.2s both;
-}
-
-.mist {
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  bottom: 0;
-  height: 28%;
-  background: linear-gradient(180deg, transparent, rgba(30, 42, 54, 0.55));
-  filter: blur(18px);
-  animation: mist-drift 12s ease-in-out infinite alternate;
+    linear-gradient(90deg, rgba(8, 11, 16, 0.92) 0%, rgba(8, 11, 16, 0.72) 38%, rgba(8, 11, 16, 0.28) 62%, rgba(8, 11, 16, 0.45) 100%),
+    linear-gradient(180deg, rgba(8, 11, 16, 0.35) 0%, transparent 28%, rgba(8, 11, 16, 0.75) 100%);
+  pointer-events: none;
 }
 
 .hero-copy {
@@ -238,6 +201,39 @@ a:hover {
 .btn.ghost:hover {
   border-color: var(--ink-dim);
   color: #fff;
+}
+
+/* —— Cast —— */
+.cast-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: 1.25rem 1rem;
+  align-items: end;
+}
+
+.cast-row figure {
+  margin: 0;
+  text-align: center;
+}
+
+.cast-row img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: clamp(9rem, 28vw, 14rem);
+  object-fit: contain;
+  object-position: bottom center;
+  margin: 0 auto 0.65rem;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+  image-rendering: auto;
+}
+
+.cast-row figcaption {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
 }
 
 /* —— Sections —— */
@@ -394,7 +390,8 @@ a:hover {
 .boss-chip {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  align-items: flex-start;
+  gap: 0.35rem;
   padding: 0.75rem 1rem;
   background: var(--slate);
   border-left: 3px solid var(--crimson);
@@ -405,6 +402,18 @@ a:hover {
   border-left-color: var(--ink-dim);
   background: transparent;
   outline: 1px solid var(--line);
+}
+
+.boss-chip img {
+  display: block;
+  max-width: 4.5rem;
+  max-height: 3.25rem;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  margin-bottom: 0.15rem;
 }
 
 .boss-chip span {
@@ -495,6 +504,12 @@ a:hover {
   font-size: 0.82rem;
   letter-spacing: 0.04em;
   color: var(--ink-dim);
+}
+
+.site-footer .art-credit {
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+  opacity: 0.85;
 }
 
 /* —— Maps —— */
@@ -663,43 +678,14 @@ a:hover {
 }
 
 /* Motion */
-@keyframes moon-rise {
+@keyframes art-in {
   from {
     opacity: 0;
-    transform: translateY(18px) scale(0.92);
+    transform: scale(1.04);
   }
   to {
     opacity: 1;
     transform: none;
-  }
-}
-
-@keyframes stars-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes castle-in {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes mist-drift {
-  from {
-    transform: translateX(-2%);
-  }
-  to {
-    transform: translateX(2%);
   }
 }
 
@@ -719,15 +705,18 @@ a:hover {
     scroll-behavior: auto;
   }
 
-  .moon,
-  .stars,
-  .castle,
-  .mist,
+  .hero-art img,
   .hero-copy,
   .route-list li {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-art img {
+    object-position: 70% center;
   }
 }

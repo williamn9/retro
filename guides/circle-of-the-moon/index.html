@@ -14,6 +14,7 @@
   <header class="site-nav">
     <a class="nav-brand" href="#top">CotM</a>
     <nav aria-label="Primary">
+      <a href="#cast">Cast</a>
       <a href="#route">Route</a>
       <a href="#maps">Maps</a>
       <a href="#chapters">Chapters</a>
@@ -24,11 +25,9 @@
 
   <main id="top">
     <section class="hero" aria-label="Hero">
-      <div class="hero-sky" aria-hidden="true">
-        <div class="moon"></div>
-        <div class="stars"></div>
-        <div class="castle"></div>
-        <div class="mist"></div>
+      <div class="hero-art" aria-hidden="true">
+        <img src="art/boxart.jpg" alt="" width="1075" height="1076" />
+        <div class="hero-veil"></div>
       </div>
       <div class="hero-copy">
         <p class="brand">Castlevania</p>
@@ -37,6 +36,35 @@
         <div class="hero-actions">
           <a class="btn primary" href="#route">Start the route</a>
           <a class="btn ghost" href="#maps">Open maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="cast" class="section cast">
+      <div class="section-inner">
+        <h2>Cast</h2>
+        <p class="section-lede">Official character art from the GBA release.</p>
+        <div class="cast-row">
+          <figure>
+            <img src="art/nathan.jpg" alt="Nathan Graves" width="200" height="434" />
+            <figcaption>Nathan Graves</figcaption>
+          </figure>
+          <figure>
+            <img src="art/hugh.gif" alt="Hugh Baldwin" width="136" height="307" />
+            <figcaption>Hugh Baldwin</figcaption>
+          </figure>
+          <figure>
+            <img src="art/camilla.jpg" alt="Camilla" width="317" height="564" />
+            <figcaption>Camilla</figcaption>
+          </figure>
+          <figure>
+            <img src="art/dracula.jpg" alt="Dracula" width="351" height="511" />
+            <figcaption>Dracula</figcaption>
+          </figure>
+          <figure>
+            <img src="art/morris.gif" alt="Morris Baldwin" width="84" height="144" />
+            <figcaption>Morris Baldwin</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -245,9 +273,9 @@
         </div>
 
         <p class="map-credit">
-          Maps from
-          <a href="https://strategywiki.org/wiki/Castlevania:_Circle_of_the_Moon/Maps" target="_blank" rel="noopener">StrategyWiki</a>
-          (fan maps of in-game layouts). Also:
+          Maps &amp; art via
+          <a href="https://strategywiki.org/wiki/Castlevania:_Circle_of_the_Moon/Maps" target="_blank" rel="noopener">StrategyWiki</a>.
+          Also:
           <a href="https://vgmaps.de/maps/gba/castlevania-circle-of-the-moon" target="_blank" rel="noopener">VGMaps</a>
           ·
           <a href="https://petercypers.github.io/COTM_interactive_map/" target="_blank" rel="noopener">Interactive map</a>
@@ -351,15 +379,15 @@
         <h2>Boss order</h2>
         <p class="section-lede">Required fights first; optional demons when you want power and XP.</p>
         <div class="boss-rail" role="list">
-          <div class="boss-chip" role="listitem"><span>Cerberus</span><em>required</em></div>
-          <div class="boss-chip" role="listitem"><span>Necromancer</span><em>required</em></div>
-          <div class="boss-chip" role="listitem"><span>Iron Golem</span><em>required</em></div>
-          <div class="boss-chip" role="listitem"><span>Adramelech</span><em>required</em></div>
-          <div class="boss-chip opt" role="listitem"><span>Dragon Zombie</span><em>optional</em></div>
-          <div class="boss-chip opt" role="listitem"><span>Death</span><em>optional</em></div>
-          <div class="boss-chip" role="listitem"><span>Camilla</span><em>required</em></div>
-          <div class="boss-chip" role="listitem"><span>Hugh</span><em>required</em></div>
-          <div class="boss-chip" role="listitem"><span>Dracula</span><em>final</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-cerberus.gif" alt="" width="110" height="49" /><span>Cerberus</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-necromancer.gif" alt="" width="56" height="59" /><span>Necromancer</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-iron-golem.gif" alt="" width="31" height="57" /><span>Iron Golem</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-adramelech.gif" alt="" width="220" height="184" /><span>Adramelech</span><em>required</em></div>
+          <div class="boss-chip opt" role="listitem"><img src="art/boss-dragon-zombie.gif" alt="" width="80" height="122" /><span>Dragon Zombie</span><em>optional</em></div>
+          <div class="boss-chip opt" role="listitem"><img src="art/boss-death.gif" alt="" width="98" height="66" /><span>Death</span><em>optional</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-camilla.gif" alt="" width="111" height="126" /><span>Camilla</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-hugh.gif" alt="" width="51" height="35" /><span>Hugh</span><em>required</em></div>
+          <div class="boss-chip" role="listitem"><img src="art/boss-dracula.gif" alt="" width="128" height="129" /><span>Dracula</span><em>final</em></div>
         </div>
       </div>
     </section>
@@ -401,6 +429,7 @@
 
   <footer class="site-footer">
     <p>Fan playing guide for personal use · Castlevania: Circle of the Moon · GBA</p>
+    <p class="art-credit">Box art, character portraits, and boss sprites © Konami · sourced via StrategyWiki</p>
   </footer>
 
   <script src="script.js"></script>
